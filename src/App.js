@@ -2,7 +2,27 @@ import React, { useState } from "react";
 import "./App.css";
 
 import Button from "./components/Button";
-const colors = ["red", "yellow", "green", "blue", "purple", "black", "pink"];
+const colors = [
+  "red",
+  "yellow",
+  "green",
+  "blue",
+  "purple",
+  "black",
+  "pink",
+  "grey",
+  "white",
+  "cyan",
+  "beige",
+  "brown",
+  "teal",
+  "aquamarine",
+];
+
+const styles = {
+  "text-align": "center",
+  padding: "10px",
+};
 function App() {
   const [clicked, setClicked] = useState([]);
   //function to handle the clicking of a button
@@ -23,7 +43,11 @@ function App() {
   return (
     <>
       <div className="jumbotron">
-        <h1 style={{ textAlign: "center" }}>MEMORY GAME!</h1>
+        <h1 style={{ textAlign: "center" }}>MEMORY GAME! - Do You Remember?</h1>
+        <p style={styles}>
+          Instructions: Click on each color ONCE! Choose a color twice and you
+          lose! Survive until no more colors and you win!
+        </p>
         <h3>
           You clicked on colors -{" "}
           {clicked.map((color) => (
